@@ -1,0 +1,33 @@
+body {
+  padding: 0;
+  background-image: url(../image/background.png);
+  background-size: cover;
+  text-align: center;
+}
+
+#game-intro {
+  padding: 20px 0px;
+}
+
+.titleimage {
+  width: 1200px;
+  margin-top: 150px;
+  margin-bottom: 30px;
+}
+
+button {
+  width: 200px;
+  margin-top: 30px;
+  padding: 30px 40px;
+  color: #fff;
+  background-color: rgb(67, 104, 11);
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sleepyguy {
+  width: 400px;
+}
