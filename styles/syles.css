@@ -1,8 +1,38 @@
 body {
   padding: 0;
-  background-image: url(../image/background.png);
+  /* background-image: url(../image/background.png); */
+  /* background-image: url(../image/background2.png); */
   background-size: cover;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+#game-screen {
+  align-content: center;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../image/background2.png);
+  background-size: cover;
+  background-position: 100% center;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
 }
 
 #game-intro {
@@ -10,24 +40,48 @@ body {
 }
 
 .titleimage {
-  width: 1200px;
-  margin-top: 150px;
-  margin-bottom: 30px;
+  width: 95%;
+  max-width: 1500px;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-bottom: 2%;
+}
+
+.instructions {
+  width: 95%;
+  max-width: 1500px;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-bottom: 2%;
 }
 
 .startbutton {
   cursor: pointer;
-  width: 376.5px;
+  margin-left: 14px;
+  width: 387.5px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 .ssbutton {
   margin-right: 15px;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
+.ssbutton button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+}
 button:active {
   transform: scale(0.95);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -35,6 +89,13 @@ button:active {
 
 .sleepyguy {
   width: 400px;
+  display: inline-block;
+}
+
+.energy {
+  width: 20%;
+  padding: 4% 8% 20%;
+  display: inline-block;
 }
 
 .gameover {
@@ -42,5 +103,38 @@ button:active {
   width: 400px;
 }
 
-#restart-button {
+.restartbutton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+  height: 80px;
+}
+
+.restbutton {
+  margin-top: 50px;
+}
+
+.restbutton button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.finishquote {
+  width: 95%;
+  max-width: 1500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.finishquote2 {
+  width: 95%;
+  max-width: 1500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

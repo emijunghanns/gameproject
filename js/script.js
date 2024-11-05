@@ -6,6 +6,9 @@ window.onload = function () {
   startButton.addEventListener("click", function () {
     startGame();
   });
+  restartButton.addEventListener(`click`, () => {
+    window.location.reload();
+  });
 
   //keydown for listening to to your keyboard
   document.addEventListener("keydown", (event) => {

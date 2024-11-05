@@ -94,7 +94,6 @@ class Game {
         oneObstacle.element.remove();
       }
     });
-
     this.goodobstacles.forEach((oneGoodObstacle, oneGoodObstacleIndex) => {
       oneGoodObstacle.move();
       const didHitMyPlayerWell = this.player.didCollide(oneGoodObstacle);
@@ -121,6 +120,7 @@ class Game {
       }
     });
   }
+
   gameOver() {
     this.gameScreen.style.display = `none`;
     this.endScreen.style.display = `block`;
