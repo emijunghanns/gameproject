@@ -17,7 +17,7 @@ body {
 
 .startbutton {
   cursor: pointer;
-  width: 388.5px;
+  width: 376.5px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   background-color: transparent;
   border: none;
@@ -35,4 +35,12 @@ button:active {
 
 .sleepyguy {
   width: 400px;
+}
+
+.gameover {
+  margin-top: 100px;
+  width: 400px;
+}
+
+#restart-button {
 }
