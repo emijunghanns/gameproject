@@ -1,5 +1,5 @@
 window.onload = function () {
-  const startButton = document.getElementById("start-button");
+  const startButton = document.getElementById("startbutton");
   const restartButton = document.getElementById("restart-button");
 
   startButton.addEventListener("click", function () {

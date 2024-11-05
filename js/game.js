@@ -3,7 +3,7 @@ class Game {
     this.startScreen = document.getElementById(`game-intro`);
     this.gameScreen = document.getElementById(`game-screen`);
     this.endScreen = document.getElementById(`game-end`);
-    this.player = new Player(50, 50); //falta la imagen que no me la toma
+    this.player = new Player(50, 50, "../image/tipito3.png"); //falta la imagen que no me la toma
     this.height = 500;
     this.width = 600;
     this.obstacles = [];

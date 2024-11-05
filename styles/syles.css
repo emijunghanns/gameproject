@@ -15,17 +15,22 @@ body {
   margin-bottom: 30px;
 }
 
-button {
-  width: 200px;
-  margin-top: 30px;
-  padding: 30px 40px;
-  color: #fff;
-  background-color: rgb(67, 104, 11);
-  font-size: 30px;
+.startbutton {
   cursor: pointer;
-  border-radius: 25px;
+  width: 388.5px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ssbutton {
+  margin-right: 15px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sleepyguy {
