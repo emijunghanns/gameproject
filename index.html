@@ -7,22 +7,46 @@
     <link rel="stylesheet" href="./styles/syles.css" />
   </head>
   <body>
-    <div id="game-intro">
-      <br />
-      <div><img src="./image/title.png" alt="" class="titleimage"/></div>
-      <div>
-        <img src="./image/instructions.png" alt="" class="instructions" />
-      </div>
-      <div><img src="./image/energyboosters.png" alt="" class="energy"/><img src="./image/sleepy.png" alt="" class="sleepyguy"/><img src="./image/energydrainers.png" alt="" class="energy"/></div>
-      <!-- <aca podrian ir las arrows/> -->
-      <div class="ssbutton">
-        <button id="startbutton"><img src="./image/start button.png" alt="" class="startbutton"/></button>
-      </div>
+
+  <div id="game-intro">
+  <br />
+  <div><img src="./image/title.png" alt="" class="titleimage"/></div>
+  <div>
+    <img src="./image/instructions.png" alt="" class="instructions" />
+  </div> 
+  <div class="details"> 
+    <div>
+      <img src="./image/energyboosters.png" alt="" class="energy"/>
+      <section class="energyboosters">
+        <img src="./image/goodobstacles/coffee.png"/>
+        <img src="./image/goodobstacles/broccoli.png"/>
+        <img src="./image/goodobstacles/airfryer.png"/>
+        <img src="./image/goodobstacles/palm.png"/>
+        <img src="./image/goodobstacles/sleep.png"/>
+      </section>
     </div>
+    <div><img src="./image/sleepy.png" alt="" class="sleepyguy"/></div>
+    <div>
+      <img src="./image/energydrainers.png" alt="" class="energy"/>
+      <section class="energyboosters">
+        <img src="./image/badobstacles/backpain.png"/>
+        <img src="./image/badobstacles/beer.png"/>
+        <img src="./image/badobstacles/burger.png"/>
+        <img src="./image/badobstacles/disco.png"/>
+        <img src="./image/badobstacles/poor.png"/>
+      </section>  
+  </div> 
+   </div>
+   
+
+  <div class="ssbutton">
+    <button id="startbutton"><img src="./image/start button.png" alt="" class="startbutton"/></button>
+  </div>
+</div>
 
     <div id="game-container">
       <div> 
-        <h2>Stats</h2>
+        <h2></h2>
         <p>Lives: <span id="lives">4</span></p>
       </div>
       <!-- #game-screen is initially hidden using CSS style display: none -->
@@ -39,7 +63,8 @@
          <br />
         <div class="restbutton"><button id="restart-button"><img src="./image/restart.png" alt="" class="restartbutton"/></button></div>
       </div>
-      
+   
+
     </main>
     <script type="text/javascript" src="js/obstacle.js"></script>
     <script type="text/javascript" src="js/goodobstacles.js"></script>

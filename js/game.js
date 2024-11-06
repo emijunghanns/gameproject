@@ -2,6 +2,7 @@ class Game {
   constructor() {
     this.startScreen = document.getElementById(`game-intro`);
     this.gameScreen = document.getElementById(`game-screen`);
+    this.gameContainer = document.getElementById(`game-container`);
     this.endScreen = document.getElementById(`game-end`);
     this.livesElement = document.getElementById(`lives`);
     this.player = new Player(800, 150, "../image/tipito3.png");
@@ -42,11 +43,13 @@ class Game {
     this.endScreen.style.display = `none`;
     //show the game screen
     this.gameScreen.style.display = `block`;
+    this.gameContainer.style.display = `block`;
 
     //start the game loop
     this.gameIntervalId = setInterval(() => {
       this.gameLoop();
     }, this.gameLoopFrequency);
+    console.log(this.player);
   }
 
   gameLoop() {
@@ -72,7 +75,7 @@ class Game {
       //this checks each bad obstacle if it collided with my player
       const didHitMyPlayerBadly = this.player.didCollide(oneObstacle);
       //if it hits, we substract a life, remove object and remove from array
-      console.error(didHitMyPlayerBadly);
+      // console.error(didHitMyPlayerBadly);
       //conditional checking when it hits
       if (didHitMyPlayerBadly) {
         //substract a life
@@ -98,7 +101,7 @@ class Game {
       oneGoodObstacle.move();
       const didHitMyPlayerWell = this.player.didCollide(oneGoodObstacle);
       //if it hits, we keep 4 lives or add a life, remove object from DOM and remove from array
-      console.error(didHitMyPlayerWell);
+      // console.error(didHitMyPlayerWell);
       //conditional checking when it hits
       if (didHitMyPlayerWell) {
         //add or keep 4 lives
