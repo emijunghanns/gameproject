@@ -3,6 +3,7 @@ body {
   /* background-image: url(../image/background.png); */
   background-image: url(../image/background2.png);
   background-size: cover;
+  background-position: center;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -165,4 +166,9 @@ button:active {
 .details > div img {
   max-width: 100%; /* Ensure images inside divs don't overflow */
   height: auto;
+}
+
+#lives img {
+  height: 40px;
+  margin-top: 5%;
 }

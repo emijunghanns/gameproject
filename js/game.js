@@ -5,7 +5,7 @@ class Game {
     this.gameContainer = document.getElementById(`game-container`);
     this.endScreen = document.getElementById(`game-end`);
     this.livesElement = document.getElementById(`lives`);
-    this.player = new Player(800, 150, "../image/tipito3.png");
+    this.player = new Player(800, 150, "image/tipito3.png");
     this.height = 500;
     this.width = 400;
     this.obstacles = [new Obstacle(this.gameScreen)];
@@ -17,6 +17,7 @@ class Game {
     this.gameLoopFrequency = Math.round(1000 / 60);
     this.bindEvents();
     this.frames = 0;
+    this.song = new Audio(`sounds/iceice.wav`);
   }
 
   bindEvents() {
@@ -44,12 +45,14 @@ class Game {
     //show the game screen
     this.gameScreen.style.display = `block`;
     this.gameContainer.style.display = `block`;
-
+    this.updateLife();
     //start the game loop
     this.gameIntervalId = setInterval(() => {
       this.gameLoop();
     }, this.gameLoopFrequency);
-    console.log(this.player);
+    this.song.loop = true;
+    this.song.play();
+    this.updateLife();
   }
 
   gameLoop() {
@@ -85,6 +88,7 @@ class Game {
         }
         //update the lives from DOM to new value
         this.livesElement.innerText = this.lives;
+        this.updateLife();
         //splice the obstacle out of the array
         this.obstacles.splice(oneObstacleIndex, 1);
         //remove the object from the DOM
@@ -110,6 +114,7 @@ class Game {
         }
         //update the lives from DOM to new value
         this.livesElement.innerText = this.lives;
+        this.updateLife();
         //splice the obstacle out of the array
         this.goodobstacles.splice(oneGoodObstacleIndex, 1);
         //remove the object from the DOM
@@ -127,5 +132,20 @@ class Game {
   gameOver() {
     this.gameScreen.style.display = `none`;
     this.endScreen.style.display = `block`;
+  }
+  updateLife() {
+    this.livesElement.innerHTML = "";
+    const imgElement = document.createElement(`img`);
+    if (this.lives === 4) {
+      imgElement.src = `image/lives/life1.png`;
+    } else if (this.lives === 3) {
+      imgElement.src = `image/lives/life2.png`;
+    } else if (this.lives === 2) {
+      imgElement.src = `image/lives/life3.png`;
+    } else if (this.lives === 1) {
+      imgElement.src = `image/lives/life4.png`;
+    }
+
+    this.livesElement.appendChild(imgElement);
   }
 }

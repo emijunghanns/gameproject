@@ -10,7 +10,7 @@ class Player {
     this.isOnGround = true;
     this.gravity = 0.5;
     this.jumpStrength = -15;
-    this.groundLevel = 800; // Set ground level where the player should land
+    this.groundLevel = 600; // Set ground level where the player should land
     this.element = document.createElement("img");
     this.element.src = playerImage;
     this.element.style.position = `absolute`;
@@ -38,10 +38,10 @@ class Player {
     // Update the player's vertical position
     this.top += this.directionY; // Change the `top` value based on directionY
     this.left += this.directionX;
-    if (this.left > 800) {
-      this.left = 800;
+    if (this.left > 900) {
+      this.left = 900;
     }
-    // arreglar que no se vaya al infinito izquierdo
+
     this.left += this.directionX;
     if (this.left < 100) {
       this.left = 100;
