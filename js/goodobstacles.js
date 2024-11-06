@@ -12,7 +12,7 @@ class GoodObs {
     this.randomIndex = Math.floor(Math.random() * this.positions.length);
     this.randomImgIndex = Math.floor(Math.random() * this.images.length);
     this.top = this.positions[this.randomIndex];
-    this.left = 2000;
+    this.left = 1500;
     this.width = 60;
     this.heigth = 150;
     this.element = document.createElement("img");
