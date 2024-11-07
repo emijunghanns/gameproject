@@ -12,13 +12,13 @@ class Obstacle {
     this.randomIndex = Math.floor(Math.random() * this.positions.length);
     this.randomImgIndex = Math.floor(Math.random() * this.images.length);
     this.top = this.positions[this.randomIndex];
-    this.left = 2000;
+    this.left = 1500;
     this.width = 60;
     this.heigth = 150;
     this.element = document.createElement("img");
     this.element.src = this.images[this.randomImgIndex];
     this.element.style.position = `absolute`;
-    this.element.style.height = `${this.height}px`;
+    this.element.style.height = `${this.heigth}px`;
     this.element.style.width = `${this.width}px`;
     this.element.style.top = `${this.top}px`;
     this.element.style.left = `${this.left}px`;
