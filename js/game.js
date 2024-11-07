@@ -133,6 +133,7 @@ class Game {
     this.gameScreen.style.display = `none`;
     this.endScreen.style.display = `block`;
   }
+
   updateLife() {
     this.livesElement.innerHTML = "";
     const imgElement = document.createElement(`img`);
@@ -145,7 +146,6 @@ class Game {
     } else if (this.lives === 1) {
       imgElement.src = `image/lives/life4.png`;
     }
-
     this.livesElement.appendChild(imgElement);
   }
 }

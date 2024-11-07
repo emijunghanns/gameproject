@@ -88,7 +88,7 @@ button:active {
 }
 
 .gameover {
-  margin-top: 100px;
+  margin-top: 20px;
   width: 400px;
 }
 
@@ -161,11 +161,11 @@ button:active {
 
 .details > div {
   text-align: center;
-  width: 100%; /* Adjust width for each section */
+  width: 100%;
 }
 
 .details > div img {
-  max-width: 100%; /* Ensure images inside divs don't overflow */
+  max-width: 100%;
   height: auto;
 }
 

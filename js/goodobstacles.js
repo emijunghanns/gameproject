@@ -14,7 +14,7 @@ class GoodObs {
     this.top = this.positions[this.randomIndex];
     this.left = 1500;
     this.width = 60;
-    this.heigth = 150;
+    this.heigth = 60;
     this.element = document.createElement("img");
     this.element.src = this.images[this.randomImgIndex];
     this.element.style.position = `absolute`;
